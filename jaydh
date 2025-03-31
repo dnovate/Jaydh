@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Auto-detect the script location
+SCRIPT_PATH=$(readlink -f "$0")
+TOOL_DIR=$(dirname "$SCRIPT_PATH")
+
+# Run the tool from the correct directory
+python "$TOOL_DIR/runner.py" "$TOOL_DIR/jaydh.py.enc"
